@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    background: greenyellow;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tela{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    border: 1px solid black;
+    background: linear-gradient(rgb(0, 217, 255), white);
+    overflow: hidden;
+    z-index: -3;
+}
+
+.box{
+    position: absolute;
+    width: 110px;
+    top: 240px;
+    left: 10px;
+}
+
+.movel{
+    position: absolute;
+    width: 110px;
+    top: 260px;
+    right: -50px;
+}
+
+
+.piso{
+    position: absolute;
+    background: green;
+    width: 100%;
+    height: 20px;
+    top: 350px;
+}
+
+.nuvem{
+    position: absolute;
+    width: 240px;
+    top: 40px;
+    z-index: -1;
+}
+
+img{
+    width: 110%;
+    top: 0;
+}
+
+.info{
+    position: relative;
+    left: 20px;
+    top: 30px;
+}
+
+.andar{
+    animation: mover 2.2s infinite linear;
+}
+
+.jump{
+    animation: pular 800ms ease-in-out;
+}
+
+.move-nuvem{
+    animation: nuvem 25s infinite linear;
+}
+
+@keyframes pular{
+    0%{
+        top: 240px
+    }
+
+    50%{
+        top: 110px;
+    }
+
+    100%{
+        top: 240px;
+    }
+}
+
+@keyframes mover{
+    0%{
+        right: -50px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+@keyframes nuvem{
+    0%{
+        right: -155px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+@media (max-width: 1000px) and (max-height: 500px) {
+    .andar{
+        animation: mover 2s infinite linear;
+    }
+
+    body{
+        height: 100px;
+    }
+
+    .piso{
+        bottom: 0;
+    }
+
+    .tela{
+        height: 100vh;
+    }
+
+    .info{
+        position: absolute;
+        top: 0;
+        z-index: -2;
+        font-size: 25px;
+    }
+}

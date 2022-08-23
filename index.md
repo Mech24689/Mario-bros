@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mario Bros</title>
+</head>
+<body>
+    <div class="tela">
+        
+            <img src="img/mario-gif.gif" class="box">
+            <img src="img/cano.png" class="movel andar">
+            <img src="img/nuvem.png" class="nuvem move-nuvem">
+        
+        <div class="piso"></div>
+    </div>    
+    <script src="js/code.js"></script>
+</body>
+</html>
