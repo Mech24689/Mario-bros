@@ -1,3 +1,5 @@
+const JumpMario = new Audio('sound/jump-mario.mp3')
+
 const box = document.querySelector('.box');
 const movel = document.querySelector('.movel')
 
@@ -27,6 +29,13 @@ document.addEventListener('keydown', function(e){
     }
 }, false)
 
+let JumpSound = (e) => {
+    if(e.key === 'Enter' || e.key === 'ArrowUp'){
+        JumpMario.play()
+    }
+}
+
+document.addEventListener('keydown', JumpSound, false)
 
 const loop = setInterval(() => {
     const movelPosition = movel.offsetLeft
@@ -38,5 +47,6 @@ const loop = setInterval(() => {
         box.style.animation = 'none'
         movel.style.left = `${movelPosition}px`
         box.style.top = `${boxPositionTop}px`
+        document.removeEventListener('keydown', JumpSound, false)
     }
 },10)
